@@ -14,7 +14,17 @@ The HistVis dataset consists of 30,000 synthetic images generated from prompts d
 
 
 ### A2. Dataset Access
+The dataset is publicly available on [Hugging Face](https://huggingface.co/datasets/mariateresadrp/HistVis) and can be downloaded using `huggingface_hub`:
 
+```python
+from huggingface_hub import snapshot_download
+
+dataset_path = snapshot_download(
+    repo_id="mariateresadrp/HistVis",
+    repo_type="dataset"
+)
+
+```
 ## B. Evaluation Methods
 
 ### B1. Visual Style Prediction
