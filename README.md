@@ -1,4 +1,4 @@
-## Code for "Retro-Spect: Evaluating Historical Representation in Diffusion Models"
+## Code for "Retro-Spect: Evaluating Historical Representations in Diffusion Models"
 
 ![Evaluation Methodology](./evalutation_methodology.png)
 
