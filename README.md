@@ -70,5 +70,28 @@ python detect_anachronisms.py \
 python analyze_anachronisms.py \
   --json_path results.json \
   --output_csv anachronism_stats.csv
+```
+
+### B3. Demographic Representation
+
+This method evaluates whether TTI models generate historically plausible demographic distributions in their outputs, focusing on race and gender. Rather than assuming modern demographic expectations, we compare generated outputs against contextual historical estimates provided by an LLM (GPT-4o). We then compute over- and underrepresentation scores by comparing model outputs with LLM predictions.
+
+## Files: 
+- `generate_demographic_estimates.py`: Uses an LLM (GPT-4o) to infer plausible demographic ratios (gender and race) for each prompt
+- `evaluate_demographic_alignment.py`: Compares FairFace-predicted outputs to LLM predictions and computes over-/underrepresentation metrics
+
+## Usage:
+```bash
+# Generate historical demographic estimates from prompts
+python generate_demographic_estimates.py \
+  --input_txt path/to/prompts.txt \
+  --output_json llm_demographics.json
+
+#  Evaluate demographic alignment
+python evaluate_demographic_alignment.py \
+  --model_outputs_csv fairface_outputs.csv \
+  --llm_json llm_demographics.json \
+  --output_csv demographic_metrics.csv
+
 
 
