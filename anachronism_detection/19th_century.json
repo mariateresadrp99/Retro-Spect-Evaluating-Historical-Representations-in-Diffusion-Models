@@ -1,0 +1,1402 @@
+[
+  {
+    "index": 1,
+    "prompt": "A person listening to music in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern audio devices",
+      "modern surroundings"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the person wearing modern clothing that would not be appropriate for the 19th century? Answer with 'yes' or 'no'.",
+      "modern audio devices": "Are there modern audio devices (like headphones or MP3 players) visible in the image? Answer with 'yes' or 'no'.",
+      "modern surroundings": "Do the surroundings include modern elements (such as contemporary architecture or vehicles) that are anachronistic to the 19th century? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 2,
+    "prompt": "A person performing music in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern musical instruments",
+      "modern stage design"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the performer dressed in modern clothing instead of period-appropriate attire? Answer with 'yes' or 'no'.",
+      "modern musical instruments": "Are there musical instruments visible that belong to a modern era rather than the 19th century? Answer with 'yes' or 'no'.",
+      "modern stage design": "Does the stage or performance setting include modern design elements not found in the 19th century? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 3,
+    "prompt": "A person playing an instrument in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern instruments",
+      "modern performance backdrop"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the individual wearing modern clothing that does not match 19th-century fashion? Answer with 'yes' or 'no'.",
+      "modern instruments": "Is the instrument being played a modern version instead of a period-appropriate instrument? Answer with 'yes' or 'no'.",
+      "modern performance backdrop": "Are there any modern backdrops or stage elements in the scene? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 4,
+    "prompt": "A person listening to a live performance in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern sound systems",
+      "modern venue architecture"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the audience member wearing modern clothing that would be out of place in the 19th century? Answer with 'yes' or 'no'.",
+      "modern sound systems": "Are there modern sound systems or electronic devices present in the venue? Answer with 'yes' or 'no'.",
+      "modern venue architecture": "Does the venue show architectural elements that are modern rather than from the 19th century? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 5,
+    "prompt": "A person singing in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern microphones or sound equipment",
+      "modern stage props"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the singer wearing modern clothing that does not fit the 19th-century setting? Answer with 'yes' or 'no'.",
+      "modern microphones or sound equipment": "Are there any modern microphones or electronic sound devices visible? Answer with 'yes' or 'no'.",
+      "modern stage props": "Do any stage props or backdrops include modern elements that are anachronistic? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 6,
+    "prompt": "A person creating art in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern art tools",
+      "modern studio environment"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the artist dressed in modern clothing rather than period-appropriate attire? Answer with 'yes' or 'no'.",
+      "modern art tools": "Are any modern art tools (such as acrylic paints or digital tablets) present instead of traditional materials? Answer with 'yes' or 'no'.",
+      "modern studio environment": "Does the studio or workspace include modern furnishings or technology that would not be found in the 19th century? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 7,
+    "prompt": "A person using colors to create something in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern art supplies",
+      "modern interior decor"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the person wearing modern clothing inconsistent with 19th-century fashion? Answer with 'yes' or 'no'.",
+      "modern art supplies": "Are there any modern art supplies (such as synthetic paints or markers) present that would not be used in the 19th century? Answer with 'yes' or 'no'.",
+      "modern interior decor": "Does the surrounding environment feature modern decor elements rather than period-appropriate ones? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 8,
+    "prompt": "A person admiring an artwork in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern frame designs",
+      "modern gallery setting"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the person admiring the artwork dressed in modern clothing instead of 19th-century attire? Answer with 'yes' or 'no'.",
+      "modern frame designs": "Are the frames or display methods of the artwork modern rather than period-appropriate? Answer with 'yes' or 'no'.",
+      "modern gallery setting": "Does the setting include modern gallery or museum elements that clash with the 19th-century theme? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 9,
+    "prompt": "A person sharing their artwork in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern digital devices",
+      "modern exhibition style"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the individual sharing artwork dressed in modern clothing that would be out of place in the 19th century? Answer with 'yes' or 'no'.",
+      "modern digital devices": "Are there modern digital devices (like smartphones or tablets) present in the image? Answer with 'yes' or 'no'.",
+      "modern exhibition style": "Does the exhibition or display method appear modern rather than consistent with 19th-century practices? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 10,
+    "prompt": "A person sketching something in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern sketching tools",
+      "modern workspace items"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the sketch artist wearing modern clothing that does not match 19th-century norms? Answer with 'yes' or 'no'.",
+      "modern sketching tools": "Are there any modern sketching tools (such as mechanical pencils or digital pads) present? Answer with 'yes' or 'no'.",
+      "modern workspace items": "Does the workspace include modern items like computers or contemporary furniture? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 11,
+    "prompt": "A person communicating using a device in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern communication devices",
+      "modern writing instruments"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the person using the device wearing modern clothing instead of period-appropriate attire? Answer with 'yes' or 'no'.",
+      "modern communication devices": "Is there any modern communication device (such as a smartphone or computer) visible in the image? Answer with 'yes' or 'no'.",
+      "modern writing instruments": "Are the writing instruments depicted modern rather than 19th-century quills or ink? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 12,
+    "prompt": "A person negotiating with someone in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern negotiation tools",
+      "modern meeting environment"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the negotiator dressed in modern attire that would be anachronistic for the 19th century? Answer with 'yes' or 'no'.",
+      "modern negotiation tools": "Are there modern tools (like laptops or smartphones) used during the negotiation? Answer with 'yes' or 'no'.",
+      "modern meeting environment": "Does the meeting environment include modern elements (such as contemporary office furniture) instead of a period setting? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 13,
+    "prompt": "A person sending a message in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern postal devices",
+      "modern writing technology"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the sender dressed in modern clothing instead of 19th-century attire? Answer with 'yes' or 'no'.",
+      "modern postal devices": "Are there modern postal or messaging devices (like digital screens) present? Answer with 'yes' or 'no'.",
+      "modern writing technology": "Is the message being sent using modern writing technology rather than period-appropriate methods? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 14,
+    "prompt": "A person listening to someone speak in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern audio equipment",
+      "modern venue features"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the listener wearing modern clothing that would be out of place in the 19th century? Answer with 'yes' or 'no'.",
+      "modern audio equipment": "Are there modern audio devices (such as amplifiers or speakers) in the scene? Answer with 'yes' or 'no'.",
+      "modern venue features": "Does the venue include modern design features that conflict with a 19th-century setting? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 15,
+    "prompt": "A person spreading a rumor in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern communication devices",
+      "modern urban elements"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the person spreading the rumor dressed in modern clothing instead of period attire? Answer with 'yes' or 'no'.",
+      "modern communication devices": "Are there modern communication devices (like cell phones) present in the image? Answer with 'yes' or 'no'.",
+      "modern urban elements": "Do any urban elements (such as modern signage or architecture) appear that would not exist in the 19th century? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 16,
+    "prompt": "A person spending time with their family in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern home furnishings",
+      "modern family leisure items"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Are any family members wearing modern clothing that is out of place in the 19th century? Answer with 'yes' or 'no'.",
+      "modern home furnishings": "Does the home environment include modern furniture or decor that would be inappropriate for the 19th century? Answer with 'yes' or 'no'.",
+      "modern family leisure items": "Are there any modern leisure items (like televisions or modern toys) visible in the scene? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 17,
+    "prompt": "A person laughing with a friend in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern social setting",
+      "modern accessories"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Are the individuals dressed in modern clothing instead of authentic 19th-century garments? Answer with 'yes' or 'no'.",
+      "modern social setting": "Does the social setting include modern elements (like contemporary cafes or streets) that clash with the 19th century? Answer with 'yes' or 'no'.",
+      "modern accessories": "Are any modern accessories (such as watches or sunglasses) visible that would be out of place? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 18,
+    "prompt": "A person holding hands with a loved one in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern accessories",
+      "modern background elements"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the couple wearing modern clothing that does not match 19th-century fashion? Answer with 'yes' or 'no'.",
+      "modern accessories": "Are there modern accessories (like digital watches or modern jewelry) present? Answer with 'yes' or 'no'.",
+      "modern background elements": "Does the background contain modern elements (such as contemporary buildings) that are out of place? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 19,
+    "prompt": "A person embracing their child in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern home decor",
+      "modern toys or props"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the parent or child dressed in modern clothing rather than period-appropriate attire? Answer with 'yes' or 'no'.",
+      "modern home decor": "Does the setting include modern home decor that would be inappropriate for the 19th century? Answer with 'yes' or 'no'.",
+      "modern toys or props": "Are there any modern toys or props present that would not exist in the 19th century? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 20,
+    "prompt": "A person welcoming a loved one home in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern interior design",
+      "modern transportation visible outside"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the person welcoming someone home wearing modern clothing instead of 19th-century attire? Answer with 'yes' or 'no'.",
+      "modern interior design": "Does the interior setting feature modern design elements that conflict with the 19th century? Answer with 'yes' or 'no'.",
+      "modern transportation visible outside": "Is there any modern vehicle or transportation visible in the background? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 21,
+    "prompt": "A person traveling from one place to another in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern vehicles",
+      "modern travel accessories"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the traveler wearing modern clothing that would be out of place in the 19th century? Answer with 'yes' or 'no'.",
+      "modern vehicles": "Are there any modern vehicles (such as cars) present instead of period-appropriate transport like carriages? Answer with 'yes' or 'no'.",
+      "modern travel accessories": "Are modern travel accessories (like GPS devices or modern suitcases) visible? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 22,
+    "prompt": "A person waiting for a ride in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern transportation",
+      "modern urban elements"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the person waiting wearing modern clothing that does not match 19th-century styles? Answer with 'yes' or 'no'.",
+      "modern transportation": "Is there any modern vehicle present in the scene instead of period-appropriate transport? Answer with 'yes' or 'no'.",
+      "modern urban elements": "Do urban elements (such as modern streetlights or signage) appear that would be anachronistic? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 23,
+    "prompt": "A person carrying belongings during a journey in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern luggage",
+      "modern travel gear"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the individual dressed in modern clothing rather than period-specific attire? Answer with 'yes' or 'no'.",
+      "modern luggage": "Are the bags or suitcases modern in design rather than those used in the 19th century? Answer with 'yes' or 'no'.",
+      "modern travel gear": "Is any modern travel gear (such as branded backpacks) visible in the image? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 24,
+    "prompt": "A person navigating using a device in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern navigation devices",
+      "modern maps or digital displays"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the navigator wearing modern clothing that is not consistent with the 19th century? Answer with 'yes' or 'no'.",
+      "modern navigation devices": "Is there any modern navigation device (like a GPS or smartphone) visible? Answer with 'yes' or 'no'.",
+      "modern maps or digital displays": "Are the maps or interfaces shown digital or modern rather than hand-drawn period maps? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 25,
+    "prompt": "A person preparing for a journey in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern travel accessories",
+      "modern preparatory tools"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the person preparing for the journey dressed in modern clothing rather than 19th-century attire? Answer with 'yes' or 'no'.",
+      "modern travel accessories": "Are any travel accessories shown modern in design (such as digital devices or modern suitcases)? Answer with 'yes' or 'no'.",
+      "modern preparatory tools": "Does the preparatory setting include modern tools or technology that would be anachronistic? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 26,
+    "prompt": "A person carrying shopping bags in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern bag designs",
+      "modern market signage"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the person carrying shopping bags wearing modern clothing instead of period-appropriate attire? Answer with 'yes' or 'no'.",
+      "modern bag designs": "Do the shopping bags appear to be modern in design rather than those used in the 19th century? Answer with 'yes' or 'no'.",
+      "modern market signage": "Is there any modern signage in the market that would be anachronistic? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 27,
+    "prompt": "A person walking through a market in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern market stall designs",
+      "modern signage"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the individual dressed in modern clothing instead of 19th-century attire? Answer with 'yes' or 'no'.",
+      "modern market stall designs": "Do the market stalls appear to have modern design elements? Answer with 'yes' or 'no'.",
+      "modern signage": "Is there modern signage in the market that would be anachronistic? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 28,
+    "prompt": "A person navigating through a street in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern street fixtures",
+      "modern storefronts"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the person wearing modern clothing inconsistent with 19th-century fashion? Answer with 'yes' or 'no'.",
+      "modern street fixtures": "Are there street fixtures (such as modern lamp posts or benches) that look out of place? Answer with 'yes' or 'no'.",
+      "modern storefronts": "Do the storefronts feature modern design elements not found in the 19th century? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 29,
+    "prompt": "A person waiting at a public gathering spot in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern public seating",
+      "modern urban decor"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the person at the gathering spot wearing modern clothing that does not belong in the 19th century? Answer with 'yes' or 'no'.",
+      "modern public seating": "Is the seating at the gathering spot modern rather than period-appropriate? Answer with 'yes' or 'no'.",
+      "modern urban decor": "Are there urban decor elements that appear modern and out of place? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 30,
+    "prompt": "A person enjoying food from a street vendor in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern food containers",
+      "modern vendor setup"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the person or vendor dressed in modern clothing instead of 19th-century attire? Answer with 'yes' or 'no'.",
+      "modern food containers": "Do the food containers or serving ware look modern instead of period-appropriate? Answer with 'yes' or 'no'.",
+      "modern vendor setup": "Does the street vendor setup include modern elements that would not be present in the 19th century? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 31,
+    "prompt": "A person dancing with someone in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern dance styles",
+      "modern ballroom decor"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Are the dancers wearing modern clothing instead of authentic 19th-century attire? Answer with 'yes' or 'no'.",
+      "modern dance styles": "Do the dance movements or styles appear modern rather than historically appropriate? Answer with 'yes' or 'no'.",
+      "modern ballroom decor": "Does the ballroom or dance setting include modern decor elements that are anachronistic? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 32,
+    "prompt": "A person running in the 19th century",
+    "possible_anachronisms": [
+      "modern athletic clothing",
+      "modern footwear",
+      "modern running environment"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern athletic clothing": "Is the runner wearing athletic clothing that is modern rather than appropriate for the 19th century? Answer with 'yes' or 'no'.",
+      "modern footwear": "Are the shoes or boots modern in design compared to what would be worn in the 19th century? Answer with 'yes' or 'no'.",
+      "modern running environment": "Does the background include modern elements (such as paved tracks or contemporary sports facilities)? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 33,
+    "prompt": "A person playing a game with someone in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern game equipment",
+      "modern recreational setting"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Are the participants wearing modern clothing instead of period-appropriate attire? Answer with 'yes' or 'no'.",
+      "modern game equipment": "Is the game equipment shown modern rather than traditional 19th-century game pieces? Answer with 'yes' or 'no'.",
+      "modern recreational setting": "Does the recreational setting include modern elements that clash with the 19th-century theme? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 34,
+    "prompt": "A person discovering a new toy in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern toy design",
+      "modern play environment"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the individual dressed in modern clothing that would be anachronistic for the 19th century? Answer with 'yes' or 'no'.",
+      "modern toy design": "Does the toy appear to be designed in a modern style instead of a traditional 19th-century toy? Answer with 'yes' or 'no'.",
+      "modern play environment": "Are there any modern elements in the play environment that do not belong in the 19th century? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 35,
+    "prompt": "A person exercising in the 19th century",
+    "possible_anachronisms": [
+      "modern athletic clothing",
+      "modern exercise equipment",
+      "modern outdoor facilities"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern athletic clothing": "Is the person exercising wearing modern athletic clothing rather than period-appropriate garments? Answer with 'yes' or 'no'.",
+      "modern exercise equipment": "Are there any modern exercise devices or equipment visible that would not be present in the 19th century? Answer with 'yes' or 'no'.",
+      "modern outdoor facilities": "Does the setting include modern sports facilities or urban elements that conflict with a 19th-century environment? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 36,
+    "prompt": "A person sharing a meal with another in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern tableware",
+      "modern dining decor"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Are the people sharing the meal dressed in modern clothing instead of period-appropriate attire? Answer with 'yes' or 'no'.",
+      "modern tableware": "Is the tableware (plates, cups) modern rather than in keeping with 19th-century styles? Answer with 'yes' or 'no'.",
+      "modern dining decor": "Does the dining environment include modern decor or furnishings that would be out of place? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 37,
+    "prompt": "A person cooking dinner in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern kitchen appliances",
+      "modern cookware"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the cook wearing modern clothing that does not fit the 19th-century setting? Answer with 'yes' or 'no'.",
+      "modern kitchen appliances": "Are there any modern kitchen appliances (like electric stoves or refrigerators) visible? Answer with 'yes' or 'no'.",
+      "modern cookware": "Is the cookware used modern rather than period-appropriate? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 38,
+    "prompt": "A person setting a table in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern table settings",
+      "modern dining room decor"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the individual setting the table wearing modern clothing rather than 19th-century attire? Answer with 'yes' or 'no'.",
+      "modern table settings": "Are the table settings (such as modern flatware or glassware) inconsistent with the period? Answer with 'yes' or 'no'.",
+      "modern dining room decor": "Does the dining room decor look modern rather than period-appropriate? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 39,
+    "prompt": "A person drinking from a bottle in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern bottle design",
+      "modern drinking accessories"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the person drinking dressed in modern clothing that would be inappropriate for the 19th century? Answer with 'yes' or 'no'.",
+      "modern bottle design": "Does the bottle appear to be a modern design instead of a typical 19th-century container? Answer with 'yes' or 'no'.",
+      "modern drinking accessories": "Are there any modern drinking accessories (like plastic cups or modern bottle openers) visible? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 40,
+    "prompt": "A person holding a bowl of food in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern dishware",
+      "modern table setting"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the person holding the bowl wearing modern clothing instead of period-appropriate attire? Answer with 'yes' or 'no'.",
+      "modern dishware": "Does the bowl or dishware look modern instead of matching 19th-century design? Answer with 'yes' or 'no'.",
+      "modern table setting": "Are there any modern table setting elements visible in the scene? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 41,
+    "prompt": "A person cleaning with a tool in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern cleaning tools",
+      "modern domestic environment"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the person cleaning wearing modern clothing that does not belong to the 19th century? Answer with 'yes' or 'no'.",
+      "modern cleaning tools": "Are any cleaning tools shown modern (like vacuum cleaners or modern mops) rather than period-appropriate? Answer with 'yes' or 'no'.",
+      "modern domestic environment": "Does the domestic setting include modern elements that would be anachronistic for the 19th century? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 42,
+    "prompt": "A person washing laundry in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern washing machines",
+      "modern laundry tools"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the person washing laundry dressed in modern clothing instead of period attire? Answer with 'yes' or 'no'.",
+      "modern washing machines": "Are there any modern washing machines or electronic laundry devices visible? Answer with 'yes' or 'no'.",
+      "modern laundry tools": "Do the laundry tools appear modern rather than those used in the 19th century? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 43,
+    "prompt": "A person organizing items in a bag in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern bag designs",
+      "modern organizational tools"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the individual wearing modern clothing that is out of place in the 19th century? Answer with 'yes' or 'no'.",
+      "modern bag designs": "Does the bag appear to be a modern design rather than a typical 19th-century bag? Answer with 'yes' or 'no'.",
+      "modern organizational tools": "Are there any modern organizational tools (like digital devices) visible? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 44,
+    "prompt": "A person feeding an animal in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern animal feed containers",
+      "modern farm structures"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the person feeding the animal wearing modern clothing that does not belong in the 19th century? Answer with 'yes' or 'no'.",
+      "modern animal feed containers": "Do the containers for animal feed look modern instead of period-appropriate? Answer with 'yes' or 'no'.",
+      "modern farm structures": "Are there modern farm structures (like contemporary barns or fences) visible in the scene? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 45,
+    "prompt": "A person ironing clothes in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern ironing equipment",
+      "modern domestic decor"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the individual ironing clothes wearing modern clothing that would not be found in the 19th century? Answer with 'yes' or 'no'.",
+      "modern ironing equipment": "Does the iron or ironing board appear modern in design instead of being period-appropriate? Answer with 'yes' or 'no'.",
+      "modern domestic decor": "Does the surrounding decor look modern rather than matching the 19th-century setting? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 46,
+    "prompt": "A person observing a building under construction in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern construction tools",
+      "modern building materials"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the person observing the construction wearing modern clothing instead of 19th-century attire? Answer with 'yes' or 'no'.",
+      "modern construction tools": "Are any construction tools present modern (like power drills) instead of period-appropriate tools? Answer with 'yes' or 'no'.",
+      "modern building materials": "Does the building under construction incorporate modern materials or design elements that would be anachronistic? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 47,
+    "prompt": "A person repairing an object in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern repair tools",
+      "modern workshop elements"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the repairer wearing modern clothing that conflicts with a 19th-century setting? Answer with 'yes' or 'no'.",
+      "modern repair tools": "Are there any modern repair tools (such as power tools) visible in the image? Answer with 'yes' or 'no'.",
+      "modern workshop elements": "Does the workshop contain modern elements (like plastic storage or electronic devices) that are out of place? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 48,
+    "prompt": "A person making clothes in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern sewing machines",
+      "modern tailoring tools"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the person making clothes dressed in modern clothing instead of period-appropriate attire? Answer with 'yes' or 'no'.",
+      "modern sewing machines": "Does the image show modern sewing machines or electronic tools instead of traditional hand-operated devices? Answer with 'yes' or 'no'.",
+      "modern tailoring tools": "Are there any modern tailoring tools present that would not exist in the 19th century? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 49,
+    "prompt": "A person building a shelter in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern construction tools",
+      "modern shelter design elements"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the individual building the shelter wearing modern clothing not suitable for the 19th century? Answer with 'yes' or 'no'.",
+      "modern construction tools": "Are there any modern construction tools (such as power saws) visible in the image? Answer with 'yes' or 'no'.",
+      "modern shelter design elements": "Does the shelter include design elements or materials that are modern rather than consistent with the period? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 50,
+    "prompt": "A person painting a surface in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern painting tools",
+      "modern work environment"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the person painting wearing modern clothing instead of attire from the 19th century? Answer with 'yes' or 'no'.",
+      "modern painting tools": "Are the painting tools (brushes, rollers) modern rather than period-appropriate? Answer with 'yes' or 'no'.",
+      "modern work environment": "Does the work environment include modern elements (such as contemporary scaffolding or equipment) that would be anachronistic? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 51,
+    "prompt": "A person praying in the 19th century",
+    "possible_anachronisms": [
+      "modern religious attire",
+      "modern religious artifacts",
+      "modern place of worship architecture"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern religious attire": "Is the person praying dressed in modern religious clothing that does not match 19th-century styles? Answer with 'yes' or 'no'.",
+      "modern religious artifacts": "Are there any modern religious artifacts (such as electronic prayer devices) present? Answer with 'yes' or 'no'.",
+      "modern place of worship architecture": "Does the place of worship show modern architectural elements instead of those from the 19th century? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 52,
+    "prompt": "A person celebrating a religious event in the 19th century",
+    "possible_anachronisms": [
+      "modern religious clothing",
+      "modern ceremonial props",
+      "modern venue decor"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern religious clothing": "Is anyone in the scene wearing religious clothing that appears modern rather than period-appropriate? Answer with 'yes' or 'no'.",
+      "modern ceremonial props": "Are there ceremonial props present that are modern rather than traditional? Answer with 'yes' or 'no'.",
+      "modern venue decor": "Does the venue decor include modern elements not fitting the 19th century? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 53,
+    "prompt": "A person reading a sacred text in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern book formats",
+      "modern library or study setting"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the reader dressed in modern clothing instead of 19th-century attire? Answer with 'yes' or 'no'.",
+      "modern book formats": "Is the sacred text presented in a modern book format (e.g., paperback) rather than a handwritten manuscript? Answer with 'yes' or 'no'.",
+      "modern library or study setting": "Does the setting include modern furnishings or lighting that would be out of place in the 19th century? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 54,
+    "prompt": "A person lighting a candle in a place of worship in the 19th century",
+    "possible_anachronisms": [
+      "modern religious attire",
+      "modern candle holders",
+      "modern interior decor"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern religious attire": "Is the person lighting the candle dressed in modern religious clothing rather than period-appropriate attire? Answer with 'yes' or 'no'.",
+      "modern candle holders": "Does the candle holder appear to be a modern design instead of a 19th-century style? Answer with 'yes' or 'no'.",
+      "modern interior decor": "Are there modern decor elements in the place of worship that are out of place for the 19th century? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 55,
+    "prompt": "A person meditating quietly in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern meditation props",
+      "modern ambient lighting"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the person meditating dressed in modern clothing rather than 19th-century attire? Answer with 'yes' or 'no'.",
+      "modern meditation props": "Are there any modern meditation props (such as cushions with contemporary patterns) present? Answer with 'yes' or 'no'.",
+      "modern ambient lighting": "Does the lighting or ambiance include modern elements that would not exist in a 19th-century setting? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 56,
+    "prompt": "A person unwrapping a gift in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern gift wrapping materials",
+      "modern festive decor"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the person unwrapping the gift dressed in modern clothing instead of period-appropriate attire? Answer with 'yes' or 'no'.",
+      "modern gift wrapping materials": "Are the gift wrapping materials or styles modern rather than those used in the 19th century? Answer with 'yes' or 'no'.",
+      "modern festive decor": "Does the celebratory environment include modern decor elements that clash with the historical setting? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 57,
+    "prompt": "A person dancing during a festival in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern dance props",
+      "modern musical instruments"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Are the dancers wearing modern clothing instead of period-appropriate attire? Answer with 'yes' or 'no'.",
+      "modern dance props": "Do any props used during the dance look modern rather than in keeping with the 19th century? Answer with 'yes' or 'no'.",
+      "modern musical instruments": "If musical instruments are visible, do they appear modern rather than historically accurate? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 58,
+    "prompt": "A person toasting with a glass at a celebration in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern glassware",
+      "modern celebratory decor"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the person toasting dressed in modern clothing that would be out of place in the 19th century? Answer with 'yes' or 'no'.",
+      "modern glassware": "Does the glass or drinking vessel look modern rather than period-appropriate? Answer with 'yes' or 'no'.",
+      "modern celebratory decor": "Are there any modern celebratory decorations present that clash with the 19th-century setting? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 59,
+    "prompt": "A person cheering at a celebration in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern celebratory accessories",
+      "modern environmental elements"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the person cheering dressed in modern clothing instead of authentic 19th-century attire? Answer with 'yes' or 'no'.",
+      "modern celebratory accessories": "Are there any modern accessories (such as banners or signs) visible that would be out of place? Answer with 'yes' or 'no'.",
+      "modern environmental elements": "Do the background elements include modern items that conflict with a 19th-century setting? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 60,
+    "prompt": "A person decorating a space for a celebration in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern decorations",
+      "modern interior design elements"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the person decorating dressed in modern clothing instead of period-appropriate attire? Answer with 'yes' or 'no'.",
+      "modern decorations": "Are the decorations used modern rather than consistent with the 19th century? Answer with 'yes' or 'no'.",
+      "modern interior design elements": "Does the setting include modern design elements that are anachronistic? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 61,
+    "prompt": "A person using a tool to illuminate a dark space in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern lighting devices",
+      "modern interior details"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the person using the tool dressed in modern clothing that would be inappropriate for the 19th century? Answer with 'yes' or 'no'.",
+      "modern lighting devices": "Is the tool used for illumination a modern device (such as an electric lamp) instead of a candle or oil lamp? Answer with 'yes' or 'no'.",
+      "modern interior details": "Do the interior details include modern elements that are anachronistic? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 62,
+    "prompt": "A person lighting a fire in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern fire-starting tools",
+      "modern outdoor elements"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the person lighting the fire wearing modern clothing rather than period-appropriate attire? Answer with 'yes' or 'no'.",
+      "modern fire-starting tools": "Are there any modern fire-starting tools (like lighters or modern matches) visible instead of traditional methods? Answer with 'yes' or 'no'.",
+      "modern outdoor elements": "Does the outdoor environment include modern elements that would not exist in the 19th century? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 63,
+    "prompt": "A person gathering water from a natural source in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern water containers",
+      "modern landscape elements"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the person gathering water wearing modern clothing that would be inappropriate for the 19th century? Answer with 'yes' or 'no'.",
+      "modern water containers": "Does the water container appear to be a modern design instead of a traditional one? Answer with 'yes' or 'no'.",
+      "modern landscape elements": "Are there any modern elements (such as modern irrigation systems) present in the natural setting? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 64,
+    "prompt": "A person shielding themselves from rain in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern rain gear",
+      "modern urban elements"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the person shielding themselves wearing modern clothing that is out of place for the 19th century? Answer with 'yes' or 'no'.",
+      "modern rain gear": "Is the rain gear (such as a modern umbrella or raincoat) modern rather than period-appropriate? Answer with 'yes' or 'no'.",
+      "modern urban elements": "Do any urban elements (like modern storefronts or vehicles) appear in the scene? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 65,
+    "prompt": "A person shielding their eyes from the sun in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern sunglasses or hats",
+      "modern outdoor decor"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the person shielding their eyes wearing modern clothing that would not be suitable for the 19th century? Answer with 'yes' or 'no'.",
+      "modern sunglasses or hats": "Are there any modern sunglasses or hats visible that are anachronistic? Answer with 'yes' or 'no'.",
+      "modern outdoor decor": "Does the outdoor setting show any modern decor elements that clash with the period? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 66,
+    "prompt": "A person taking medicine in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern medical devices",
+      "modern pharmaceutical packaging"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the person taking medicine dressed in modern clothing instead of 19th-century attire? Answer with 'yes' or 'no'.",
+      "modern medical devices": "Are there any modern medical devices (like digital thermometers) visible? Answer with 'yes' or 'no'.",
+      "modern pharmaceutical packaging": "Does the medicine come in modern packaging rather than traditional containers? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 67,
+    "prompt": "A person examining a patient in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern medical instruments",
+      "modern clinical settings"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the medical examiner dressed in modern clothing that would not be seen in the 19th century? Answer with 'yes' or 'no'.",
+      "modern medical instruments": "Are any modern medical instruments (such as modern stethoscopes) visible? Answer with 'yes' or 'no'.",
+      "modern clinical settings": "Does the clinical setting include modern furnishings or equipment that would be anachronistic? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 68,
+    "prompt": "A person assisting someone who is injured in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern first-aid equipment",
+      "modern emergency setting"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the person assisting the injured wearing modern clothing that is not consistent with the 19th century? Answer with 'yes' or 'no'.",
+      "modern first-aid equipment": "Are there any modern first-aid devices (like modern bandages or kits) visible? Answer with 'yes' or 'no'.",
+      "modern emergency setting": "Does the emergency setting include modern elements that clash with the period? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 69,
+    "prompt": "A person treating a wound with care in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern wound care tools",
+      "modern medical environment"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the caregiver dressed in modern clothing instead of period-appropriate attire? Answer with 'yes' or 'no'.",
+      "modern wound care tools": "Are there any modern wound care tools (such as modern antiseptics or bandages) visible? Answer with 'yes' or 'no'.",
+      "modern medical environment": "Does the setting have modern medical elements that would be out of place in the 19th century? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 70,
+    "prompt": "A person applying a medical treatment in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern medical devices",
+      "modern clinical decor"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the person applying the treatment dressed in modern clothing instead of 19th-century attire? Answer with 'yes' or 'no'.",
+      "modern medical devices": "Are any modern medical devices (like digital monitors) visible during the treatment? Answer with 'yes' or 'no'.",
+      "modern clinical decor": "Does the clinical setting contain modern decor elements that do not belong in the 19th century? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 71,
+    "prompt": "A person studying in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern educational tools",
+      "modern classroom decor"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the student wearing modern clothing that would be inappropriate for the 19th century? Answer with 'yes' or 'no'.",
+      "modern educational tools": "Are there any modern educational tools (like laptops or digital tablets) visible? Answer with 'yes' or 'no'.",
+      "modern classroom decor": "Does the classroom contain modern decor elements that are anachronistic? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 72,
+    "prompt": "A person teaching music to another in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern teaching aids",
+      "modern classroom or studio elements"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the music teacher dressed in modern clothing instead of 19th-century attire? Answer with 'yes' or 'no'.",
+      "modern teaching aids": "Are there modern teaching aids (such as digital displays) visible in the image? Answer with 'yes' or 'no'.",
+      "modern classroom or studio elements": "Does the classroom or studio include modern elements that would not exist in the 19th century? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 73,
+    "prompt": "A person guiding someone in understanding in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern educational props",
+      "modern environmental elements"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the guide dressed in modern clothing that would be out of place in the 19th century? Answer with 'yes' or 'no'.",
+      "modern educational props": "Are there any modern educational props (like digital screens) present? Answer with 'yes' or 'no'.",
+      "modern environmental elements": "Does the environment include modern elements (such as contemporary furniture) that clash with a 19th-century setting? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 74,
+    "prompt": "A person using a learning tool in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern learning devices",
+      "modern study space"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the individual using the learning tool dressed in modern clothing rather than period-appropriate attire? Answer with 'yes' or 'no'.",
+      "modern learning devices": "Are any learning devices visible that are modern (such as digital tablets) instead of traditional tools? Answer with 'yes' or 'no'.",
+      "modern study space": "Does the study space include modern decor or furniture that would be anachronistic for the 19th century? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 75,
+    "prompt": "A person reading and taking notes in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern writing instruments",
+      "modern study environment"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the person reading dressed in modern clothing that does not match 19th-century styles? Answer with 'yes' or 'no'.",
+      "modern writing instruments": "Are the writing instruments (pens, paper) modern instead of traditional quills and parchment? Answer with 'yes' or 'no'.",
+      "modern study environment": "Does the study environment contain modern elements (such as computers or modern desks) that are anachronistic? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 76,
+    "prompt": "A person planting seeds in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern farming tools",
+      "modern agricultural landscape"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the person planting seeds wearing modern clothing instead of period-appropriate attire? Answer with 'yes' or 'no'.",
+      "modern farming tools": "Are there modern farming tools (such as power equipment) visible instead of traditional hand tools? Answer with 'yes' or 'no'.",
+      "modern agricultural landscape": "Does the agricultural setting include modern elements (like modern irrigation systems) that would be anachronistic? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 77,
+    "prompt": "A person tending a vegetable garden in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern gardening tools",
+      "modern garden layout"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the person tending the garden dressed in modern clothing instead of period-appropriate attire? Answer with 'yes' or 'no'.",
+      "modern gardening tools": "Are any gardening tools modern (such as powered equipment) instead of traditional tools? Answer with 'yes' or 'no'.",
+      "modern garden layout": "Does the layout or design of the garden include modern elements that would be out of place in the 19th century? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 78,
+    "prompt": "A person caring for livestock in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern livestock handling tools",
+      "modern farm structures"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the person caring for livestock dressed in modern clothing instead of 19th-century attire? Answer with 'yes' or 'no'.",
+      "modern livestock handling tools": "Are there modern tools for handling livestock visible that would not exist in the 19th century? Answer with 'yes' or 'no'.",
+      "modern farm structures": "Do any of the farm structures appear modern rather than period-appropriate? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 79,
+    "prompt": "A person watering crops in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern watering equipment",
+      "modern agricultural elements"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the person watering crops wearing modern clothing that is inconsistent with the 19th century? Answer with 'yes' or 'no'.",
+      "modern watering equipment": "Does the watering equipment appear modern instead of traditional tools? Answer with 'yes' or 'no'.",
+      "modern agricultural elements": "Are there any modern elements in the field (like modern irrigation) that would be anachronistic? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 80,
+    "prompt": "A person plowing a field in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern plowing equipment",
+      "modern agricultural landscape"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the person plowing the field wearing modern clothing that would not be used in the 19th century? Answer with 'yes' or 'no'.",
+      "modern plowing equipment": "Does the plowing equipment appear modern (like a tractor) instead of traditional animal-drawn plows? Answer with 'yes' or 'no'.",
+      "modern agricultural landscape": "Does the field include modern agricultural features that would be anachronistic? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 81,
+    "prompt": "A person putting on clothing in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern dressing accessories",
+      "modern interior details"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the person dressing in modern clothing rather than 19th-century garments? Answer with 'yes' or 'no'.",
+      "modern dressing accessories": "Are there any modern accessories (such as modern jewelry or watches) visible that are out of place? Answer with 'yes' or 'no'.",
+      "modern interior details": "Does the dressing area or mirror include modern design elements? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 82,
+    "prompt": "A person showing off their style in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern fashion accessories",
+      "modern urban elements"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the person exhibiting their style in modern clothing that is anachronistic for the 19th century? Answer with 'yes' or 'no'.",
+      "modern fashion accessories": "Are any fashion accessories present modern rather than period-appropriate? Answer with 'yes' or 'no'.",
+      "modern urban elements": "Does the background include modern urban features that conflict with the historical setting? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 83,
+    "prompt": "A person accessorizing their outfit in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern accessories",
+      "modern styling cues"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the person dressed in modern clothing that would not be typical for the 19th century? Answer with 'yes' or 'no'.",
+      "modern accessories": "Are there any modern accessories (such as sunglasses or modern bags) that appear in the image? Answer with 'yes' or 'no'.",
+      "modern styling cues": "Do any styling cues (such as modern hairstyles) appear that are out of place for the period? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 84,
+    "prompt": "A person shaving their face in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern shaving tools",
+      "modern bathroom or dressing area"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the person shaving wearing modern clothing that would be anachronistic for the 19th century? Answer with 'yes' or 'no'.",
+      "modern shaving tools": "Are there any modern shaving tools (like electric razors) visible instead of traditional blades? Answer with 'yes' or 'no'.",
+      "modern bathroom or dressing area": "Does the setting include modern bathroom or dressing area elements that are out of place? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 85,
+    "prompt": "A person combing their hair in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern grooming tools",
+      "modern vanity or mirror"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the individual combing their hair dressed in modern clothing instead of 19th-century garments? Answer with 'yes' or 'no'.",
+      "modern grooming tools": "Are the grooming tools (combs, brushes) modern in style rather than traditional? Answer with 'yes' or 'no'.",
+      "modern vanity or mirror": "Does the vanity or mirror appear modern instead of being period-appropriate? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 86,
+    "prompt": "A person showing bravery in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern heroic props",
+      "modern background elements"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the person displaying bravery wearing modern clothing rather than period attire? Answer with 'yes' or 'no'.",
+      "modern heroic props": "Are there any modern props (such as modern medals or weapons) visible that would be anachronistic? Answer with 'yes' or 'no'.",
+      "modern background elements": "Do the background elements include modern items that conflict with a 19th-century setting? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 87,
+    "prompt": "A person expressing joy after achieving a goal in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern celebratory props",
+      "modern environment details"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the person expressing joy wearing modern clothing instead of period-appropriate attire? Answer with 'yes' or 'no'.",
+      "modern celebratory props": "Are there any modern celebratory props present that would not be found in the 19th century? Answer with 'yes' or 'no'.",
+      "modern environment details": "Does the environment include modern elements (such as contemporary architecture) that are anachronistic? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 88,
+    "prompt": "A person smiling warmly at a friend in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern accessories",
+      "modern background settings"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Are the individuals dressed in modern clothing instead of authentic 19th-century attire? Answer with 'yes' or 'no'.",
+      "modern accessories": "Are there any modern accessories (such as digital watches) visible that would be out of place? Answer with 'yes' or 'no'.",
+      "modern background settings": "Does the background include modern elements that would be anachronistic for the 19th century? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 89,
+    "prompt": "A person expressing gratitude to another in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern communication devices",
+      "modern decor"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the person expressing gratitude wearing modern clothing that does not match the 19th-century setting? Answer with 'yes' or 'no'.",
+      "modern communication devices": "Are there any modern communication devices (like smartphones) visible in the scene? Answer with 'yes' or 'no'.",
+      "modern decor": "Does the surrounding decor include modern elements that conflict with the period? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 90,
+    "prompt": "A person standing up for a cause in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern protest signs",
+      "modern rally environment"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the activist dressed in modern clothing that would not be found in the 19th century? Answer with 'yes' or 'no'.",
+      "modern protest signs": "Are there any modern protest signs or banners visible that are out of place? Answer with 'yes' or 'no'.",
+      "modern rally environment": "Does the rally environment include modern elements (such as contemporary architecture or technology) that are anachronistic? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 91,
+    "prompt": "A person working in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern work tools",
+      "modern work environment"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the worker wearing modern clothing that would not be appropriate for the 19th century? Answer with 'yes' or 'no'.",
+      "modern work tools": "Are there any modern work tools or machinery visible that are out of place in the 19th century? Answer with 'yes' or 'no'.",
+      "modern work environment": "Does the work environment include modern elements (like contemporary office furniture) that clash with the period? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 92,
+    "prompt": "A person helping to lift something heavy in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern lifting equipment",
+      "modern industrial elements"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the helper wearing modern clothing that is inconsistent with 19th-century attire? Answer with 'yes' or 'no'.",
+      "modern lifting equipment": "Are there any modern lifting tools or equipment visible that would be out of place? Answer with 'yes' or 'no'.",
+      "modern industrial elements": "Does the environment include modern industrial features (like contemporary warehouses or vehicles) that are anachronistic? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 93,
+    "prompt": "A person supervising a team in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern supervisory tools",
+      "modern office or work environment"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the supervisor dressed in modern clothing that does not belong in the 19th century? Answer with 'yes' or 'no'.",
+      "modern supervisory tools": "Are there any modern devices or tools (such as digital tablets) used for supervision? Answer with 'yes' or 'no'.",
+      "modern office or work environment": "Does the setting include modern office or work environment elements that are out of place? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 94,
+    "prompt": "A person signing a document in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern writing instruments",
+      "modern document formats"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the person signing the document wearing modern clothing instead of period attire? Answer with 'yes' or 'no'.",
+      "modern writing instruments": "Are there any modern writing instruments (like ballpoint pens) visible instead of quills? Answer with 'yes' or 'no'.",
+      "modern document formats": "Does the document appear in a modern format (e.g., printed on modern paper) rather than a handwritten manuscript? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 95,
+    "prompt": "A person reviewing a group’s progress on a project in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern project management tools",
+      "modern meeting settings"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the person reviewing the project dressed in modern clothing instead of period-appropriate attire? Answer with 'yes' or 'no'.",
+      "modern project management tools": "Are there any modern project management tools (like computers or digital charts) visible? Answer with 'yes' or 'no'.",
+      "modern meeting settings": "Does the meeting setting include modern furnishings or decor that are not appropriate for the 19th century? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 96,
+    "prompt": "A person selling items at a market stall in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern market stall design",
+      "modern pricing signage"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the seller dressed in modern clothing instead of 19th-century attire? Answer with 'yes' or 'no'.",
+      "modern market stall design": "Does the market stall have a design that is reminiscent of modern styles rather than traditional ones? Answer with 'yes' or 'no'.",
+      "modern pricing signage": "Are the pricing labels or signs visible modern and out of place? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 97,
+    "prompt": "A person bargaining with a vendor in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern bargaining tools",
+      "modern marketplace elements"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the person bargaining dressed in modern clothing instead of period-appropriate attire? Answer with 'yes' or 'no'.",
+      "modern bargaining tools": "Are there any modern tools (like digital payment devices) used during the bargaining? Answer with 'yes' or 'no'.",
+      "modern marketplace elements": "Does the marketplace feature modern elements that would be anachronistic for the 19th century? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 98,
+    "prompt": "A person wrapping goods for a customer in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern packaging materials",
+      "modern retail setups"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the person wrapping goods wearing modern clothing that does not fit the 19th-century setting? Answer with 'yes' or 'no'.",
+      "modern packaging materials": "Are the packaging materials or wrapping styles modern rather than those used in the 19th century? Answer with 'yes' or 'no'.",
+      "modern retail setups": "Does the retail setup include modern design elements that would be out of place in the 19th century? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 99,
+    "prompt": "A person opening a shop in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern storefront design",
+      "modern business signage"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the shop owner dressed in modern clothing instead of period-appropriate attire? Answer with 'yes' or 'no'.",
+      "modern storefront design": "Does the shop’s storefront include modern design elements that are anachronistic? Answer with 'yes' or 'no'.",
+      "modern business signage": "Is there any modern signage visible that would not belong in the 19th century? Answer with 'yes' or 'no'."
+    }
+  },
+  {
+    "index": 100,
+    "prompt": "A person closing a register after a sale in the 19th century",
+    "possible_anachronisms": [
+      "modern clothing",
+      "modern cash registers",
+      "modern retail technology"
+    ],
+    "questions_to_identify_anachronisms": {
+      "modern clothing": "Is the person closing the register wearing modern clothing that is out of place for the 19th century? Answer with 'yes' or 'no'.",
+      "modern cash registers": "Does the register appear to be a modern cash register instead of a traditional money box or ledger system? Answer with 'yes' or 'no'.",
+      "modern retail technology": "Are there any modern retail technologies (like digital screens or computers) visible that would be anachronistic? Answer with 'yes' or 'no'."
+    }
+  }
+]
