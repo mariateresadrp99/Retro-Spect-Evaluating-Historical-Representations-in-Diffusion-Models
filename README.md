@@ -60,7 +60,7 @@ python detect_anachronisms.py \
   --json_file path/to/prompts.json \
   --output_file results.json
 
-# Compute Frequency and Severity
+# Compute Frequency and Severity Metrics
 python analyze_anachronisms.py \
   --json_path results.json \
   --output_csv anachronism_stats.csv
