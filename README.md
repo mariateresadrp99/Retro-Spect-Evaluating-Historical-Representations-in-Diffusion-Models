@@ -17,8 +17,8 @@ Text-To-Image (TTI) models have become powerful tools for artistic creation and 
 - Prompts follow the format:  
   > *"A person [activity] in the [historical period]"*
 - **Time Periods**:  
-  - Five centuries (17th–21st)  
-  - Five decades (1910s–1990s)
+  - Five centuries (17th, 18th, 19th, 20th, 21st century)  
+  - Five decades (1910s, 1930s, 1950s, 1970s, 1990s)
 - **Activities**:  
   - 100 universal human activities  
   - Drawn from 20 categories (e.g., art, work, celebration, survival, communication)
