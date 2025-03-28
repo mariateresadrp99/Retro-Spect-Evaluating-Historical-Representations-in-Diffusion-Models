@@ -53,16 +53,14 @@ This module detects and analyzes visual anachronisms in synthetic images generat
 - `example_data/`: Includes a sample JSON input with prompts and questions.
 
 ## Usage
-
-### - Detect Anachronisms
-
 ```bash
+# Detect Anachronisms
 python detect_anachronisms.py \
   --image_root path/to/images \
   --json_file path/to/prompts.json \
   --output_file results.json
 
-### - Compute Frequency and Severity
+# Compute Frequency and Severity
 python analyze_anachronisms.py \
   --json_path results.json \
   --output_csv anachronism_stats.csv
