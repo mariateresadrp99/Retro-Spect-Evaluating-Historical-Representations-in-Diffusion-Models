@@ -49,7 +49,7 @@ This module detects and analyzes visual anachronisms in synthetic images generat
 ## Files
 
 - `anachronism_detection.py`: Runs anachronism detection using GPT-4 Turbo.
-- `compute_anachr_freq_and_sever.py`: Aggregates detection results to compute frequency and severity metrics.
+- `compute_anachr_freq_and_sever.py`: Compute anachronism frequency and severity metrics.
 - `19th_century.json`: Includes a sample JSON input with prompts and questions for the VLM.
 
 ## Usage
