@@ -15,15 +15,10 @@ Text-To-Image (TTI) models have become powerful tools for artistic creation and 
 
 The **HistVis** dataset consists of **30,000 synthetic images** generated from prompts describing 100 universal human activities across 10 historical time periods, using three state-of-the-art diffusion models. Each prompt follows the format:
 
-> *"A person [activity] in the [historical period]"*
+> *"A person [activity] in the [historical period]"*,
+combining 100 activities (drawn from 20 domains such as art, work, celebration, and communication) with five centuries (17th–21st) and five 20th-century decades (1910s, 1930s, 1950s, 1970s, 1990s). For each activity–period pair, 10 images were generated per model. All images are annotated with the associated prompt, activity category, time period, and model identifier.
 
-Activities are drawn from 20 domains such as art, work, celebration, communication, and survival. Time periods include five centuries (17th–21st) and five 20th-century decades (1910s, 1930s, 1950s, 1970s, 1990s). For each unique activity–period pair, 10 images were generated per model.
 
-Each image is annotated with:
-- Prompt metadata  
-- Activity category  
-- Time period  
-- Model identifier
 
 
 ### Dataset Access
