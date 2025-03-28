@@ -25,6 +25,9 @@ dataset_path = snapshot_download(
 )
 
 ```
+## Licence
+The HistVis dataset is released under the Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0) license.
+
 ## B. Evaluation Methods
 
 ### B1. Visual Style Prediction
