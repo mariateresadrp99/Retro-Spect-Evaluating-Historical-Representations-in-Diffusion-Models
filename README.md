@@ -6,7 +6,7 @@ Text-To-Image (TTI) models have become powerful tools for artistic creation and 
 (2) Historical Consistency: detecting anachronisms such as the depiction of modern objects in historical scenes; and (3) Demographic Representation: comparing generated racial and gender distributions against historically plausible baselines derived from Large Language Models. We find that TTI models frequently stereotype past eras by adding visual stylistic properties not defined in the prompt, while also introducing anachronisms at notable rates and failing to reflect historically plausible demographic patterns. By providing a structured evaluation methodology and empirical insights, this work highlights critical gaps in the historical reasoning of TTI models. We release both the HistVis dataset and the accompanying tools needed to replicate our analysis and support the evaluation of additional TTI systems, laying the foundation for more historically responsible generative models.
 
 
-## The HistVis Dataset
+## A. The HistVis Dataset
 
 ### Dataset Overview
 The HistVis dataset consists of 30,000 synthetic images generated from prompts describing 100 universal human activities across 10 historical time periods using three state-of-the-art diffusion models (Stable Diffusion XL, Stable Diffusion 3, FLUX.1-schnell). Each prompt follows the format "A person [activity] in the [historical period]", combining 100 activities (drawn from 20 domains such as art, work, celebration, and communication) with five centuries (17th–21st) and five 20th-century decades (1910s, 1930s, 1950s, 1970s, 1990s). For each activity–period pair, 10 images were generated per model. All images are annotated with the associated prompt, activity category, time period, and model identifier.
@@ -18,7 +18,7 @@ The HistVis dataset consists of 30,000 synthetic images generated from prompts d
 
 ### Dataset Access
 
-## Evaluation Methods
+## B. Evaluation Methods
 
 ### 1. Visual Style Prediction
 
