@@ -55,6 +55,11 @@ This module detects and analyzes visual anachronisms in synthetic images generat
 
 ## Usage
 ```bash
+
+# LLM Anachronism Detection
+python generate_anachronism_questions.py \
+  --input_txt path/to/prompts.txt \
+
 # VLM Anachronism Detection
 python detect_anachronisms.py \
   --image_root path/to/images \
