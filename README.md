@@ -31,7 +31,7 @@ Each image is annotated with:
 
 ### Dataset Access
 
-##Evaluation Methods
+## Evaluation Methods
 
 ### 1. Visual Style Prediction
 
