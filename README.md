@@ -18,7 +18,7 @@ Text-To-Image (TTI) models have become powerful tools for artistic creation and 
   - Five centuries (17th–21st)  
   - Five decades (1910s–1990s)
 - **Activities**:  
-  - 100 historically plausible, universal human activities  
+  - 100 universal human activities  
   - Drawn from 20 categories (e.g., art, work, celebration, survival, communication)
 
 Each image is annotated with:
@@ -26,5 +26,4 @@ Each image is annotated with:
 - Activity category
 - Time period
 - Model identifier
-- Evaluation labels (e.g., predicted visual style, anachronism detection, demographics)
 
