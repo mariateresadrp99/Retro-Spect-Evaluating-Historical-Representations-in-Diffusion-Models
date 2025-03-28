@@ -54,7 +54,7 @@ This module detects and analyzes visual anachronisms in synthetic images generat
 
 ## Usage
 ```bash
-# Detect Anachronisms
+# VLM Anachronism Detection
 python detect_anachronisms.py \
   --image_root path/to/images \
   --json_file path/to/prompts.json \
