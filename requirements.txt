@@ -1,0 +1,20 @@
+# Core ML & Data
+numpy
+pandas
+scikit-learn
+matplotlib
+seaborn
+Pillow
+tqdm
+
+# Deep Learning
+tensorflow>=2.13.0
+keras>=2.13.1
+torch
+transformers
+
+# Hugging Face
+huggingface_hub
+
+# OpenAI API
+openai
