@@ -1,4 +1,5 @@
-## Code for "Retro-Spect: Evaluating Historical Representations in Diffusion Models"
+## Code for "Synthetic History: Evaluating Visual Representations of the Past in Diffusion
+Models"
 
 ![Evaluation Methodology](./evalutation_methodology.png)
 
