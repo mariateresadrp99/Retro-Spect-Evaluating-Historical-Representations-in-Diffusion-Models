@@ -14,15 +14,22 @@ The HistVis dataset consists of 30,000 synthetic images generated from prompts d
 
 
 ### A2. Dataset Access
-The dataset is publicly available on [Hugging Face](https://huggingface.co/datasets/latentcanon/HistVis) and can be downloaded using `huggingface_hub`:
+The dataset is publicly available on [Hugging Face](https://huggingface.co/datasets/latentcanon/HistVis) and can be downloaded using:
 
 ```python
-from huggingface_hub import snapshot_download
+# Basic download of CSV metadata
+from datasets import load_dataset
+import pandas as pd
 
-dataset_path = snapshot_download(
-    repo_id="latentcanon/HistVis",
-    repo_type="dataset"
-)
+# Load only the metadata
+dataset = load_dataset('csv', data_files='https://huggingface.co/datasets/latentcanon/HistVis/resolve/main/dataset.csv')
+
+# Convert to pandas DataFrame for easier manipulation
+df = pd.DataFrame(dataset['train'])
+print(f"Dataset contains {len(df)} entries")
+
+# View first few entries
+print(df.head())
 
 ```
 ## Licence
