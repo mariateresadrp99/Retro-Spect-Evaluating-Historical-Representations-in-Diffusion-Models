@@ -75,7 +75,7 @@ pip install tensorflow pandas numpy matplotlib seaborn huggingface_hub datasets
 python visual_style_prediction/predict_visual_style.py --use_hf_dataset --use_hf_model --output_file style_predictions.csv
 ```
 
-### 🔧 Using a Custom Dataset
+**Using a Custom Dataset:**
 
 ```bash
 python visual_style_prediction/predict_visual_style.py --dataset_csv your_dataset.csv --use_hf_model --output_file predictions.csv
@@ -84,17 +84,13 @@ python visual_style_prediction/predict_visual_style.py --dataset_csv your_datase
 ### 2. Calculating VSD Scores
 
 ```bash
-python visual_style_prediction/vsd_scorer.py --predictions style_predictions.csv --output vsd_results.csv --visualize
-```bash
-
-
-
-
+python visual_style_prediction/vsd_scorer.py --output_file style_predictions.csv --output vsd_results.csv 
+```
 
 
 ## Model Weights
 
-The pretrained model is available on [Hugging Face](https://huggingface.co/mariateresadrp/visual_style_predictor) and can be downloaded using `huggingface_hub`:
+Our pretrained model is available on [Hugging Face](https://huggingface.co/mariateresadrp/visual_style_predictor) and can be downloaded using `huggingface_hub`:
 
 ```python
 from huggingface_hub import hf_hub_download
@@ -107,24 +103,6 @@ model_path = hf_hub_download(
 
 model = load_model(model_path)
 ```
-
-## Visual Style Dominance (VSD) Score
-To quantify how strongly a model defaults to a specific style for a given historical period, we define the Visual Style Dominance (VSD) Score:
-
-VSD(m, t) = max<sub>s</sub> P<sub>m</sub>(s | t)
-
-Where:
-
-m is the model,
-
-t is the time period (e.g., 1910s, 20th century),
-
-s is one of the six predicted styles,
-
-P<sub>m</sub>(s | t) is the proportion of images from model m and time period t that were classified into style s.
-
-A VSD score close to 1.0 indicates strong stylistic convergence (homogeneity), while a lower VSD score reflects higher visual diversity. The corresponding dominant style is the one with the highest predicted proportion for that period and model.
-
 
 ### B2. Anachronism Detection 
 
