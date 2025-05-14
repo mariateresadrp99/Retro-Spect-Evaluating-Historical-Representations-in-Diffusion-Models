@@ -65,7 +65,7 @@ Since WikiArt does not distinguish between color and monochrome photography, a *
 pip install tensorflow pandas numpy matplotlib seaborn huggingface_hub datasets
 ```
 
-## 📌 Usage
+## Usage
 
 ### 1. Predicting Visual Styles
 
@@ -81,6 +81,11 @@ python visual_style_prediction/predict_visual_style.py --use_hf_dataset --use_hf
 python visual_style_prediction/predict_visual_style.py --dataset_csv your_dataset.csv --use_hf_model --output_file predictions.csv
 ```
 
+### 2. Calculating VSD Scores
+
+```bash
+python visual_style_prediction/vsd_scorer.py --predictions style_predictions.csv --output vsd_results.csv --visualize
+```bash
 
 
 
