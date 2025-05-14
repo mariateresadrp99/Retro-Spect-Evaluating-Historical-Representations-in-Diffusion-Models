@@ -69,13 +69,13 @@ pip install tensorflow pandas numpy matplotlib seaborn huggingface_hub datasets
 
 ### 1. Predicting Visual Styles
 
-**Using the HistVis Dataset and Pre-trained Model:**
+**Using the HistVis Dataset and Fine Tuned Model:**
 
 ```bash
 python visual_style_prediction/predict_visual_style.py --use_hf_dataset --use_hf_model --output_file style_predictions.csv
 ```
 
-**Using a Custom Dataset:**
+**Using a Custom Dataset and Model:**
 
 ```bash
 python visual_style_prediction/predict_visual_style.py --dataset_csv your_dataset.csv --use_hf_model --output_file predictions.csv
@@ -90,7 +90,7 @@ python visual_style_prediction/vsd_scorer.py --output_file style_predictions.csv
 
 ## Model Weights
 
-Our pretrained model is available on [Hugging Face](https://huggingface.co/mariateresadrp/visual_style_predictor) and can be downloaded using `huggingface_hub`:
+Our fine tuned model is available on [Hugging Face](https://huggingface.co/mariateresadrp/visual_style_predictor) and can be downloaded using `huggingface_hub`:
 
 ```python
 from huggingface_hub import hf_hub_download
