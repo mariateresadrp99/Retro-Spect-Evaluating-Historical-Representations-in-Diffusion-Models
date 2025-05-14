@@ -65,7 +65,7 @@ model_path = hf_hub_download(
 model = load_model(model_path)
 ```
 
-📊 Visual Style Dominance (VSD) Score
+## Visual Style Dominance (VSD) Score
 To quantify how strongly a model defaults to a specific style for a given historical period, we define the Visual Style Dominance (VSD) Score:
 
 VSD(m, t) = max<sub>s</sub> P<sub>m</sub>(s | t)
