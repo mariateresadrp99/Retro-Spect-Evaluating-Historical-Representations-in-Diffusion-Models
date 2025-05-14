@@ -41,7 +41,7 @@ def predict_style(model, img_path):
 def main(args):
     # Load trained CNN model
     model = load_model(args.model_path)
-    print(f"✅ Loaded model from: {args.model_path}")
+    print(f"Loaded model from: {args.model_path}")
 
     results = []
 
@@ -69,7 +69,7 @@ def main(args):
     # Save results
     df = pd.DataFrame(results)
     df.to_csv(args.output_file, index=False)
-    print(f"\n🎉 Done! Saved predictions for {len(df)} images to: {args.output_file}")
+    print(f"\nDone! Saved predictions for {len(df)} images to: {args.output_file}")
 
 
 if __name__ == "__main__":
