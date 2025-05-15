@@ -106,7 +106,7 @@ The module consists of two main scripts:
 ## Installation
 
 ```bash
-pip install 
+pip install openai tqdm pandas numpy fuzzywuzzy pilloW
 ```
 
 ## Usage
