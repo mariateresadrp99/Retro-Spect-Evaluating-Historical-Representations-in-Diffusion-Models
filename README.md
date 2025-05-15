@@ -57,7 +57,7 @@ pip install datasets tensorflow huggingface_hub opencv-python pandas numpy seabo
 
 ## Usage
 
-### 1. Predicting Visual Styles
+### B1.1 Predicting Visual Styles
 
 **Using the HistVis Dataset and Fine Tuned Model:**
 
@@ -70,7 +70,7 @@ python predict_visual_style.py \
   --output_csv "style_predictions.csv"
 ```
 
-### 2. Calculating VSD Scores
+### B1.2. Calculating VSD Scores
 
 ```bash
 python vsd_scorer.py \
