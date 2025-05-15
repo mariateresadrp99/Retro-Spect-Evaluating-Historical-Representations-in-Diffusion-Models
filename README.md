@@ -99,24 +99,17 @@ model = load_model(model_path)
 
 ### B2. Anachronism Detection 
 
-The module consists of two main scripts:
-
+The module consists of three main scripts:
+- `llm_anachronism_proposal.py`: Given a prompt, uses an LLM (GPT-4o) to propose potential anachronisms and generate identification questions.
+- `anachronism_detection.py`: Performs anachronism detection via a VQA model  (GPT-4o).
+- `compute_anachr_freq_and_sever.py`: Computes frequency and severity metrics for each detected anachronism.
 
 
 ## Installation
 
 ```bash
-pip install openai tqdm pandas numpy fuzzywuzzy pilloW huggingface_hub
+pip install openai tqdm pandas numpy fuzzywuzzy python-Levenshtein pilloW huggingface_hub
 ```
-
-## Usage
-
-## Files
-
-- `llm_anachronism_proposal.py`: Given a prompt with a historical condition, an LLM (GPT-4o) proposes potential anachronisms in the generated images, as well as identification questions for a VQA model.
-- `anachronism_detection.py`: Runs anachronism detection using a VQA (GPT-4 Turbo).
-- `compute_anachr_freq_and_sever.py`: Compute anachronism frequency and severity metrics.
-- `19th_century.json`: Includes a sample JSON input with prompts and questions for the VLM (GPT-4 Turbo).
 
 ## Usage
 ```bash
