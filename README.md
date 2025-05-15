@@ -130,11 +130,11 @@ python llm_anachronism_proposal.py \
 python detect_anachronisms.py \
   --prompts_json anachronism_detection/19th_century.json \ # An usage example of the previous output 
   --metadata_url "https://huggingface.co/datasets/latentcanon/HistVis/resolve/main/dataset.csv" \
-  --output_json anachronism_detection/19th_century.json
+  --output_json 19th_century_anachronisms_detected.json
 
 # Compute Frequency and Severity Metrics
 python analyze_anachronisms.py \
-  --json_path results.json \
+  --json_path 19th_century_anachronisms_detected.json \ # path to the json file including results from the anachronism detection
   --output_csv anachronism_stats.csv
 ```
 
