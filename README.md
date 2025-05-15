@@ -150,10 +150,9 @@ python generate_demographic_estimates.py \
   --output_csv 19th_century_demographics.csv
 
 #  Evaluate demographic alignment
-python evaluate_demographic_alignment.py \
-  --model_outputs_csv fairface_outputs.csv \
-  --llm_json llm_demographics.json \
-  --output_csv demographic_metrics.csv
-
+python over_underrepresentation_calculation.py \
+  --llm_csv       19th_century_demographics.csv \
+  --fairface_csv  fairface_aggregated_by_prompt.csv \
+  --output_csv    19th_century_under_over.csv
 
 
