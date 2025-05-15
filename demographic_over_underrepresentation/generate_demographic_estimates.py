@@ -1,92 +1,81 @@
-# generate_demographic_estimates.py
-# -------------------------------------------------------------
-# Uses GPT-4o to generate plausible gender & race
-# distributions for each historical prompt.
-# -------------------------------------------------------------
+#!/usr/bin/env python3
+"""
+generate_demographic_estimates.py
+
+Reads a .txt file of HistVis prompts, queries GPT-4o for gender & race estimates,
+and writes a CSV with one row per prompt:
+  prompt, male, female, white, black, indian, middle_eastern, southeast_asian, east_asian, latino
+"""
+
 import json
 import argparse
 import time
 from tqdm import tqdm
+import pandas as pd
 from openai import OpenAI
 
+# initialize OpenAI client (needs OPENAI_API_KEY in env)
 client = OpenAI()
 
-# Instruction string for GPT-4o
 INSTRUCTION = (
-    "For a given prompt [activity in time period], estimate the percentage of male vs. female, "
-    "and the percentage of each major racial group (white, black, asian, indian). "
-    "Base your estimates on global historical norms, social structures, and any known constraints. "
-    "Output must be valid JSON with two keys: 'gender_estimate' and 'race_estimate'. "
-    "Each should be a dictionary with keys 'male' and 'female' or 'white', 'black', 'asian', 'indian', "
-    "whose values sum to 100."
+    "For a given prompt “[activity] in the [time period]”, estimate percentages for:\n"
+    "  • gender_estimate: {\"male\": X, \"female\": Y}\n"
+    "  • race_estimate: {"
+    "\"white\": A, \"black\": B, \"indian\": C, "
+    "\"middle_eastern\": D, \"southeast_asian\": E, "
+    "\"east_asian\": F, \"latino\": G"
+    "}\n"
+    "Values must be integers summing to 100. Return valid JSON with those two keys."
 )
 
-def build_prompt(prompt_text):
+def build_messages(prompt_text):
     return [
-        {
-            "role": "system",
-            "content": (
-                "You are a historical demographics assistant. "
-                "You will be given a prompt describing an activity and a historical period. "
-                "Estimate the likely gender and racial breakdown in percentages, drawing from global historical contexts."
-            )
-        },
-        {
-            "role": "user",
-            "content": (
-                f"{INSTRUCTION}\n\n"
-                f"Prompt: {prompt_text}\n\n"
-                "Format example:\n"
-                "{\n"
-                "  \"gender_estimate\": {\"male\": 70, \"female\": 30},\n"
-                "  \"race_estimate\": {\"white\": 50, \"black\": 20, \"asian\": 20, \"indian\": 10}\n"
-                "}"
-            )
-        }
+        {"role": "system", "content": "You are a historical demographics assistant."},
+        {"role": "user", "content": f"{INSTRUCTION}\n\nPrompt: {prompt_text}"}
     ]
 
-def query_llm_for_demographics(prompt_text):
+def query_llm(prompt_text):
     try:
-        messages = build_prompt(prompt_text)
-        response = client.chat.completions.create(
-            model="gpt-4-turbo",
-            messages=messages,
+        resp = client.chat.completions.create(
+            model="gpt-4o",
+            messages=build_messages(prompt_text),
             temperature=0.4,
-            max_tokens=500
+            max_tokens=256
         )
-        raw_content = response.choices[0].message.content
-        parsed = json.loads(raw_content)
-        return parsed.get("gender_estimate", {}), parsed.get("race_estimate", {})
+        return json.loads(resp.choices[0].message.content)
     except Exception as e:
-        print(f"❌ Error with prompt '{prompt_text}': {e}")
-        return {}, {}
+        print(f"[Error] '{prompt_text}': {e}")
+        return {"gender_estimate": {}, "race_estimate": {}}
 
-def main(input_file, output_file):
-    # Load prompts from a JSON list, each item with a 'prompt' key
-    with open(input_file, "r") as f:
-        prompts = json.load(f)
-
-    results = []
-    for idx, item in enumerate(tqdm(prompts, desc="Generating demographics")):
-        prompt_text = item.get("prompt", "")
-        gender_est, race_est = query_llm_for_demographics(prompt_text)
-        results.append({
-            "index": idx,
-            "prompt": prompt_text,
-            "gender_estimate": gender_est,
-            "race_estimate": race_est
+def main(input_txt, output_csv, delay):
+    prompts = [L.strip() for L in open(input_txt) if L.strip()]
+    rows = []
+    for prompt in tqdm(prompts, desc="Estimating demographics"):
+        out = query_llm(prompt)
+        ge = out.get("gender_estimate", {})
+        re = out.get("race_estimate", {})
+        rows.append({
+            "prompt": prompt,
+            "male":   ge.get("male"),
+            "female": ge.get("female"),
+            "white":          re.get("white"),
+            "black":          re.get("black"),
+            "indian":         re.get("indian"),
+            "middle_eastern": re.get("middle_eastern"),
+            "southeast_asian":re.get("southeast_asian"),
+            "east_asian":     re.get("east_asian"),
+            "latino":         re.get("latino"),
         })
-        # Optional sleep to avoid rate-limits
-        time.sleep(1.0)
+        time.sleep(delay)
 
-    # Save final results
-    with open(output_file, "w") as f:
-        json.dump(results, f, indent=4)
-    print(f"Saved demographic estimates to {output_file}")
+    df = pd.DataFrame(rows)
+    df.to_csv(output_csv, index=False)
+    print(f"→ Wrote {len(df)} rows to {output_csv}")
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--input_file", required=True, help="JSON file with a list of prompts [{\"prompt\":\"...\"},...]")
-    parser.add_argument("--output_file", required=True, help="Where to save the LLM-based demographic proposals")
+    parser = argparse.ArgumentParser(description="Generate CSV of demographic estimates")
+    parser.add_argument("--input_txt",  required=True, help="One prompt per line")
+    parser.add_argument("--output_csv", required=True, help="CSV output path")
+    parser.add_argument("--delay",      type=float, default=1.0, help="Seconds between requests")
     args = parser.parse_args()
-    main(args.input_file, args.output_file)
+    main(args.input_txt, args.output_csv, args.delay)
