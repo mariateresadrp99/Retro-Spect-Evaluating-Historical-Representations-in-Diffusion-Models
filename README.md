@@ -124,7 +124,7 @@ pip install openai tqdm pandas numpy fuzzywuzzy pilloW
 # LLM Anachronism Detection
 python llm_anachronism_proposal.py \
   --input_txt data/19th_century_prompts.txt \ <-- This is an example of how the input txt file with prompts should look like
-  --output_json data/19th_century.json <-- <-- An example output of potential anachronisms is provided
+  --output_json data/19th_century.json <-- <-- An example output of potential anachronisms is provided in anachronism_detection/19th_century.json
 
 # VLM Anachronism Detection
 python detect_anachronisms.py \
