@@ -106,7 +106,7 @@ The module consists of two main scripts:
 ## Installation
 
 ```bash
-pip install openai tqdm pandas numpy fuzzywuzzy pilloW
+pip install openai tqdm pandas numpy fuzzywuzzy pilloW huggingface_hub
 ```
 
 ## Usage
@@ -133,7 +133,7 @@ python detect_anachronisms.py \
   --output_json 19th_century_anachronisms_detected.json
 
 # Compute Frequency and Severity Metrics
-python analyze_anachronisms.py \
+python compute_anachr_freq_and_sever.py \
   --json_path 19th_century_anachronisms_detected.json \ # path to the json file including results from the anachronism detection
   --output_csv anachronism_stats.csv
 ```
