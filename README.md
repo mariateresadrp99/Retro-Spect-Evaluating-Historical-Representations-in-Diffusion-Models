@@ -52,7 +52,7 @@ The module consists of two main scripts:
 ## Installation
 
 ```bash
-pip install datasets tensorflow huggingface_hub opencv-python pandas numpy
+pip install datasets tensorflow huggingface_hub opencv-python pandas numpy seaborn matplotlib
 ```
 
 ## Usage
@@ -73,7 +73,11 @@ python predict_visual_style.py \
 ### 2. Calculating VSD Scores
 
 ```bash
-python visual_style_prediction/vsd_scorer.py --output_file style_predictions.csv --output vsd_results.csv 
+python vsd_scorer.py \
+  --predictions "style_predictions.csv" \
+  --output "vsd_results.csv" \
+  --visualize \
+  --output-prefix "vsd"
 ```
 
 
