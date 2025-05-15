@@ -46,18 +46,8 @@ This module analyzes the stylistic tendencies of text-to-image (TTI) models by p
 
 The module consists of two main scripts:
 
-- `predict_visual_style.py`: Predicts visual styles using a fine-tuned CNN classifier.
+- `predict_visual_style.py`: Predicts visual styles using a trained CNN classifier on a WikiArt-derived dataset and fine-tuned to distinguish six stylistic categories: drawings, engravings, illustrations, paintings and photography. Since WikiArt does not distinguish between color and monochrome photography, a **colorfulness score** is computed to separate them.
 - `vsd_scorer.py`: Calculates Visual Style Dominance (VSD) scores based on predictions.
-
-The classifier identifies six visual style categories:
-- **Drawings**
-- **Engravings**
-- **Illustrations**
-- **Paintings**
-- **Photography (Color)**
-- **Photography (Monochrome)**
-
-Since WikiArt does not distinguish between color and monochrome photography, a **colorfulness score** is computed to separate them.
 
 ## Installation
 
