@@ -230,7 +230,7 @@ def main():
     vsd_df.to_csv(args.output, index=False)
 
     # Summary analysis
-    print("▶ Generating summary analysis...")
+    print("Generating summary analysis...")
     analysis = analyze_vsd_results(vsd_df)
 
     # Print key findings
