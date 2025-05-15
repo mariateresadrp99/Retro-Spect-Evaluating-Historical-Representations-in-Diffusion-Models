@@ -128,9 +128,9 @@ python llm_anachronism_proposal.py \
 
 # VLM Anachronism Detection
 python detect_anachronisms.py \
-  --image_root path/to/images \
-  --json_file path/to/prompts.json \
-  --output_file results.json
+  --prompts_json anachronism_detection/19th_century.json \ # An usage example of the previous output 
+  --metadata_url "https://huggingface.co/datasets/latentcanon/HistVis/resolve/main/dataset.csv" \
+  --output_json anachronism_detection/19th_century.json
 
 # Compute Frequency and Severity Metrics
 python analyze_anachronisms.py \
