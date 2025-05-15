@@ -1,10 +1,18 @@
-# detect_anachronisms.py
-# --------------------------------------------
-# This script performs visual anachronism detection using GPT-4 Vision.
-# It reads a JSON file with prompt metadata and related questions,
-# encodes images into base64, sends them to the GPT-4 Turbo model along with the questions,
-# and returns structured answers per image.
-# --------------------------------------------
+#!/usr/bin/env python3
+"""
+detect_anachronisms.py
+
+Performs visual anachronism detection on HistVis images using GPT-4 Vision.
+
+Takes as input:
+  - A JSON file (e.g. anachronism_detection/19th_century.json) containing:
+      index, prompt, and questions_to_identify_anachronisms
+  - A directory tree of images named by prompt index under subfolders
+
+Outputs:
+  - A JSON file with, for each image:
+      prompt_number, prompt_text, image_path, and image_analysis (question→answer)
+"""
 
 import os
 import json
@@ -15,94 +23,98 @@ from PIL import Image
 from tqdm import tqdm
 from openai import OpenAI
 
-# Initialize OpenAI client using your API key from environment variable
+# Initialize OpenAI client (requires OPENAI_API_KEY in environment)
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
-# Resize image to 512x512 for API compatibility while preserving aspect ratio
 def resize_image(image_path, max_size=(512, 512)):
+    """
+    Resize image to fit within max_size, preserve aspect ratio, return JPEG bytes.
+    """
     with Image.open(image_path) as img:
         img.thumbnail(max_size, Image.Resampling.LANCZOS)
-        buffer = io.BytesIO()
-        img.save(buffer, format="JPEG")
-        return buffer.getvalue()
+        buf = io.BytesIO()
+        img.save(buf, format="JPEG")
+        return buf.getvalue()
 
-# Convert image to base64 string for API transmission
-def encode_image_to_base64(image_path):
-    image_data = resize_image(image_path)
-    base64_encoded_data = base64.b64encode(image_data).decode("utf-8")
-    return f"data:image/jpeg;base64,{base64_encoded_data}"
+def encode_image_to_base64(image_bytes):
+    """
+    Encode raw image bytes into a base64 data URI.
+    """
+    b64 = base64.b64encode(image_bytes).decode("utf-8")
+    return f"data:image/jpeg;base64,{b64}"
 
-# Send image + questions to GPT-4 Vision and extract answers
 def process_image_analysis(image_data_url, questions):
-    content_blocks = [{"type": "text", "text": "Analyze the image and answer these questions:\n"}]
-    for key, question in questions.items():
-        content_blocks.append({"type": "text", "text": f"{key}: {question}\n"})
-
-    content_blocks.append({"type": "image_url", "image_url": {"url": image_data_url}})
-    content_blocks.append({"type": "text", "text": "Answer each question in order, starting each answer with the corresponding key."})
+    """
+    Send the image + questions to GPT-4 Vision and parse answers.
+    Returns a dict: question_key → answer_text.
+    """
+    # Build content blocks
+    content = [{"type": "text", "text": "Identify anachronisms in this image:\n"}]
+    for key, q in questions.items():
+        content.append({"type": "text", "text": f"{key}: {q}\n"})
+    content.append({"type": "image_url", "image_url": {"url": image_data_url}})
+    content.append({"type": "text", "text": "Reply with each key: yes or no."})
 
     messages = [
-        {"role": "system", "content": "You are an AI assistant identifying anachronisms in images."},
-        {"role": "user", "content": content_blocks}
+        {"role": "system", "content": "You are an AI assistant identifying anachronisms."},
+        {"role": "user", "content": content}
     ]
 
     try:
-        response = client.chat.completions.create(
-            model="gpt-4-turbo",
+        resp = client.chat.completions.create(
+            model="gpt-4o",     
             messages=messages,
             max_tokens=500,
             temperature=0.7
         )
-        content = response.choices[0].message.content.strip()
+        text = resp.choices[0].message.content.strip()
         answers = {}
-        for line in content.split("\n"):
+        for line in text.splitlines():
             if ":" in line:
-                key, value = line.split(":", 1)
-                answers[key.strip()] = value.strip()
+                key, val = line.split(":", 1)
+                answers[key.strip()] = val.strip()
         return answers
     except Exception as e:
-        print(f"Error: {e}")
-        return None
+        print(f"[Error] Vision API failed: {e}")
+        return {}
 
-# Main processing loop
-def main(image_root, json_file_path, output_file):
-    # Load prompt data with detection questions
-    with open(json_file_path, "r") as f:
-        prompt_data = json.load(f)
-
+def main(image_root, json_file, output_file):
+    """
+    Orchestrate detection over all prompts and images.
+    """
+    prompts = json.load(open(json_file))
     results = []
-    for item in tqdm(prompt_data, desc="Processing prompts"):
-        prompt_number = item.get("index")
-        prompt_text = item.get("prompt", "")
+
+    for item in tqdm(prompts, desc="Prompts"):
+        idx    = item["index"]
+        prompt = item.get("prompt", "")
         questions = item.get("questions_to_identify_anachronisms", {})
 
-        # Find subfolders like image_root/<category>/<prompt_number>
-        matching_dirs = glob.glob(os.path.join(image_root, "*", str(prompt_number)))
-        for image_dir in matching_dirs:
-            for filename in os.listdir(image_dir):
-                if filename.lower().endswith((".png", ".jpg", ".jpeg")):
-                    image_path = os.path.join(image_dir, filename)
-                    encoded = encode_image_to_base64(image_path)
-                    analysis = process_image_analysis(encoded, questions)
-                    if analysis:
-                        results.append({
-                            "prompt_number": prompt_number,
-                            "prompt_text": prompt_text,
-                            "image_path": image_path,
-                            "image_analysis": analysis,
-                        })
+        # Locate images under any category subfolder
+        pattern = os.path.join(image_root, "*", str(idx), "*.*")
+        for img_path in glob.glob(pattern):
+            if not img_path.lower().endswith((".jpg",".jpeg",".png")):
+                continue
+            raw = resize_image(img_path)
+            data_url = encode_image_to_base64(raw)
+            analysis = process_image_analysis(data_url, questions)
+            results.append({
+                "prompt_number": idx,
+                "prompt_text": prompt,
+                "image_path": img_path,
+                "image_analysis": analysis
+            })
 
-    # Save output to JSON
+    # Write out detections
     with open(output_file, "w") as f:
-        json.dump(results, f, indent=4)
-    print(f" Results saved to {output_file}")
+        json.dump(results, f, indent=2)
+    print(f"→ Saved detections to {output_file}")
 
-# Entry point for CLI execution
 if __name__ == "__main__":
     import argparse
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--image_root", required=True, help="Base folder for images")
-    parser.add_argument("--json_file", required=True, help="Input JSON with prompts + questions")
-    parser.add_argument("--output_file", required=True, help="Where to store output JSON")
+    parser = argparse.ArgumentParser(description="Detect anachronisms with GPT-4 Vision")
+    parser.add_argument("--image_root",  required=True, help="Base folder where images are stored")
+    parser.add_argument("--json_file",   required=True, help="JSON of prompts + questions")
+    parser.add_argument("--output_file", required=True, help="Output JSON path for detections")
     args = parser.parse_args()
     main(args.image_root, args.json_file, args.output_file)
