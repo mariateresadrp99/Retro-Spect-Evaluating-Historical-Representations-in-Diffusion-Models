@@ -52,7 +52,7 @@ The module consists of two main scripts:
 ## Installation
 
 ```bash
-pip install tensorflow pandas numpy matplotlib seaborn huggingface_hub datasets
+pip install datasets tensorflow huggingface_hub opencv-python pandas numpy
 ```
 
 ## Usage
