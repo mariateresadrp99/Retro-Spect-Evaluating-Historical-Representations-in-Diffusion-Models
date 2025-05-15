@@ -155,7 +155,7 @@ python generate_demographic_estimates.py \
   --output_csv 19th_century_demographics.csv
 ```
 
-#  B3.2 Evaluate demographic alignment
+### B3.2 Evaluate demographic alignment
 ```bash
 python over_underrepresentation_calculation.py \
   --llm_csv       19th_century_demographics.csv \
