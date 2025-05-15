@@ -70,7 +70,7 @@ python predict_visual_style.py \
   --output_csv "style_predictions.csv"
 ```
 
-### B1.2. Calculating VSD Scores
+### B1.2 Calculating VSD Scores
 
 ```bash
 python vsd_scorer.py \
