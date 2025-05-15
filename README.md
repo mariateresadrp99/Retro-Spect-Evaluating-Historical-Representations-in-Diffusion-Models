@@ -78,7 +78,7 @@ python visual_style_prediction/predict_visual_style.py --use_hf_dataset --use_hf
 **Using a Custom Dataset and Model:**
 
 ```bash
-python visual_style_prediction/predict_visual_style.py --dataset_csv your_dataset.csv --use_hf_model --output_file predictions.csv
+python visual_style_prediction/predict_visual_style.py --dataset_csv your_dataset.csv --your_finetuned_model --output_file predictions.csv
 ```
 
 ### 2. Calculating VSD Scores
