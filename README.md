@@ -113,8 +113,8 @@ pip install openai tqdm pandas numpy fuzzywuzzy pilloW
 
 ## Files
 
-- `llm_anachronism_proposal.py`: Given a prompt with a historical condition, an LLM (GPT-4o) proposes potential anachronisms in the generated images, as well as identification questions for a VLM model.
-- `anachronism_detection.py`: Runs anachronism detection using a VLM (GPT-4 Turbo).
+- `llm_anachronism_proposal.py`: Given a prompt with a historical condition, an LLM (GPT-4o) proposes potential anachronisms in the generated images, as well as identification questions for a VQA model.
+- `anachronism_detection.py`: Runs anachronism detection using a VQA (GPT-4 Turbo).
 - `compute_anachr_freq_and_sever.py`: Compute anachronism frequency and severity metrics.
 - `19th_century.json`: Includes a sample JSON input with prompts and questions for the VLM (GPT-4 Turbo).
 
@@ -122,8 +122,9 @@ pip install openai tqdm pandas numpy fuzzywuzzy pilloW
 ```bash
 
 # LLM Anachronism Detection
-python generate_anachronism_questions.py \
-  --input_txt path/to/prompts.txt \
+python llm_anachronism_proposal.py \
+  --input_txt data/19th_century_prompts.txt \ <-- This is an example of how the input txt file with prompts should look like
+  --output_json data/19th_century.json <-- <-- An example output of potential anachronisms is provided
 
 # VLM Anachronism Detection
 python detect_anachronisms.py \
