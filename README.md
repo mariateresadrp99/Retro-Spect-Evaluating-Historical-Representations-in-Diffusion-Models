@@ -62,13 +62,12 @@ pip install datasets tensorflow huggingface_hub opencv-python pandas numpy
 **Using the HistVis Dataset and Fine Tuned Model:**
 
 ```bash
-python visual_style_prediction/predict_visual_style.py --use_hf_dataset --use_hf_model --output_file style_predictions.csv
-```
-
-**Using a Custom Dataset and Model:**
-
-```bash
-python visual_style_prediction/predict_visual_style.py --dataset_csv your_dataset.csv --your_finetuned_model --output_file style_predictions.csv
+python predict_visual_style.py \
+  --metadata_url "https://huggingface.co/datasets/latentcanon/HistVis/resolve/main/dataset.csv" \
+  --model_repo "mariateresadrp/visual_style_predictor" \
+  --model_file "best_vgg16_only_last.keras" \
+  --threshold 10 \
+  --output_csv "style_predictions.csv"
 ```
 
 ### 2. Calculating VSD Scores
