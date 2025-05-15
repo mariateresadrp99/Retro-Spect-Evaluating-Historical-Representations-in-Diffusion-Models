@@ -112,20 +112,23 @@ pip install openai tqdm pandas numpy fuzzywuzzy python-Levenshtein pilloW huggin
 ```
 
 ## Usage
+### B2.1 LLM Anachronism Detection
 ```bash
-
-# LLM Anachronism Detection
 python llm_anachronism_proposal.py \
   --input_txt anachronism_detection/19th_century_prompts.txt \ # This is an example of how the input txt file should look like
   --output_json anachronism_detection/19th_century.json  # An example output of how the json file should look like
+```
 
-# VLM Anachronism Detection
+### B2.2 VQA Anachronism Detection
+```bash
 python detect_anachronisms.py \
   --prompts_json anachronism_detection/19th_century.json \ # An usage example of the previous output 
   --metadata_url "https://huggingface.co/datasets/latentcanon/HistVis/resolve/main/dataset.csv" \
   --output_json 19th_century_anachronisms_detected.json
+```
 
-# Compute Frequency and Severity Metrics
+### B2.3 Computation of Frequency and Severity Metrics
+```bash
 python compute_anachr_freq_and_sever.py \
   --json_path 19th_century_anachronisms_detected.json \ # path to the json file including results from the anachronism detection
   --output_csv anachronism_stats.csv
