@@ -146,8 +146,8 @@ This method evaluates whether TTI models generate historically plausible demogra
 ```bash
 # Generate historical demographic estimates from prompts
 python generate_demographic_estimates.py \
-  --input_txt path/to/prompts.txt \
-  --output_json llm_demographics.json
+  --input_txt anachronism_detection/19th_century_prompts.txt \
+  --output_csv 19th_century_demographics.csv
 
 #  Evaluate demographic alignment
 python evaluate_demographic_alignment.py \
