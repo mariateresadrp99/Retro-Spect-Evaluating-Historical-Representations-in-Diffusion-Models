@@ -1,109 +1,80 @@
-# --------------------------------------------------------------
-# Compares TTI model outputs from a demographic classifier
-# (FairFace, etc.) with LLM-based historical demographic estimates.
-# Computes over- and under-representation metrics.
-# --------------------------------------------------------------
-import json
-import argparse
+#!/usr/bin/env python3
+"""
+
+After you’ve obtained:
+  1) LLM demographic estimates CSV (one row per prompt):
+       prompt, male, female, white, black, indian,
+       middle_eastern, southeast_asian, east_asian, latino
+  2) FairFace‐aggregated CSV (one row per prompt_index):
+       prompt_index, model_gender_male, model_gender_female,
+       model_race_white, model_race_black, model_race_indian,
+       model_race_middle_eastern, model_race_southeast_asian,
+       model_race_east_asian, model_race_latino
+
+This script merges them and computes under-/over‐representation for each category:
+  under_d = max(0, llm_d – model_d)
+  over_d  = max(0, model_d – llm_d)
+"""
+
 import pandas as pd
+import argparse
 
-def load_llm_estimates(llm_path):
-    """
-    Load the LLM demographic estimates.
-    Format: [{
-        'index': 0,
-        'prompt': 'A person cooking in the 19th century',
-        'gender_estimate': { 'male': 60, 'female': 40 },
-        'race_estimate': { 'white': 50, 'black': 20, 'asian': 20, 'indian': 10 }
-    }, ...]
-    """
-    with open(llm_path, "r") as f:
-        return json.load(f)
+def compute_under_over(llm, model):
+    diff = model - llm
+    return (max(0.0, llm - model), max(0.0, model - llm))
 
-def load_model_outputs(model_csv):
-    """
-    Load a CSV that contains demographic distribution per prompt.
-    For example:
-        prompt_index, model_gender_male, model_gender_female, model_race_white, model_race_black, ...
-    Values might be raw counts or percentages. For this example, we'll assume percentages.
-    """
-    df = pd.read_csv(model_csv)
-    return df
+def main(llm_csv, fairface_csv, output_csv):
+    # Load LLM estimates
+    df_llm = pd.read_csv(llm_csv)
+    # assign prompt_index by row order
+    df_llm = df_llm.reset_index().rename(columns={'index':'prompt_index'})
+    # rename columns to llm_*
+    rename_map = {c: f'llm_{c}' for c in df_llm.columns
+                  if c not in ['prompt_index','prompt']}
+    df_llm = df_llm.rename(columns=rename_map)
 
-def compute_over_under(llm_val, model_val):
-    """
-    Return (under, over) for a single category, following Equations (1) and (2).
-    llm_val and model_val are numeric percentages.
-    """
-    if model_val <= llm_val:
-        under = llm_val - model_val
-        over = 0
-    else:
-        under = 0
-        over = model_val - llm_val
-    return under, over
+    # Load FairFace‐aggregated demographics
+    df_model = pd.read_csv(fairface_csv)
 
-def main(llm_path, model_csv, output_csv):
-    llm_data = load_llm_estimates(llm_path)
-    df_model = load_model_outputs(model_csv)
+    # Merge on prompt_index
+    df = df_model.merge(df_llm, on='prompt_index', how='left')
 
-    # Convert llm_data into a DataFrame keyed by 'index'
-    # We'll keep columns for each category: male, female, white, black, asian, indian
-    records = []
-    for entry in llm_data:
-        idx = entry['index']
-        prompt = entry['prompt']
-        gender_est = entry.get('gender_estimate', {})
-        race_est = entry.get('race_estimate', {})
-        records.append({
-            'index': idx,
-            'prompt': prompt,
-            'llm_gender_male': gender_est.get('male', 0),
-            'llm_gender_female': gender_est.get('female', 0),
-            'llm_race_white': race_est.get('white', 0),
-            'llm_race_black': race_est.get('black', 0),
-            'llm_race_asian': race_est.get('asian', 0),
-            'llm_race_indian': race_est.get('indian', 0)
-        })
-    df_llm = pd.DataFrame(records)
+    # Define categories and their model/llm column names
+    cats = {
+        'male':              ('model_gender_male',   'llm_male'),
+        'female':            ('model_gender_female', 'llm_female'),
+        'white':             ('model_race_white',    'llm_white'),
+        'black':             ('model_race_black',    'llm_black'),
+        'indian':            ('model_race_indian',   'llm_indian'),
+        'middle_eastern':    ('model_race_middle_eastern', 'llm_middle_eastern'),
+        'southeast_asian':   ('model_race_southeast_asian','llm_southeast_asian'),
+        'east_asian':        ('model_race_east_asian','llm_east_asian'),
+        'latino':            ('model_race_latino',   'llm_latino'),
+    }
 
-    # Merge model outputs with LLM estimates by 'index'
-    df_merged = pd.merge(df_model, df_llm, on='index', how='left')
+    # Compute under_/over_ for each category
+    for cat, (mcol, lcol) in cats.items():
+        under_col = f'under_{cat}'
+        over_col  = f'over_{cat}'
+        df[[under_col, over_col]] = df.apply(
+            lambda r: compute_under_over(r[lcol], r[mcol]),
+            axis=1, result_type='expand'
+        )
 
-    # We'll compute under/over for each of the 6 categories
-    categories = [
-        ('gender_male', 'llm_gender_male'),
-        ('gender_female', 'llm_gender_female'),
-        ('race_white', 'llm_race_white'),
-        ('race_black', 'llm_race_black'),
-        ('race_asian', 'llm_race_asian'),
-        ('race_indian', 'llm_race_indian')
-    ]
+    # Select desired columns
+    keep = ['prompt_index','prompt'] \
+         + [m for m,_ in cats.values()] \
+         + [l for _,l in cats.values()] \
+         + [f'under_{c}' for c in cats] \
+         + [f'over_{c}'  for c in cats]
 
-    under_cols = []
-    over_cols = []
-
-    for model_col, llm_col in categories:
-        under_col = f'under_{model_col}'
-        over_col = f'over_{model_col}'
-        under_cols.append(under_col)
-        over_cols.append(over_col)
-
-        # We assume the model CSV has columns named exactly like 'model_gender_male'
-        df_merged[under_col], df_merged[over_col] = zip(*df_merged.apply(
-            lambda row: compute_over_under(
-                row[llm_col],
-                row[f"model_{model_col}"]
-            ), axis=1
-        ))
-
-    df_merged.to_csv(output_csv, index=False)
-    print(f" Over/Under representation analysis saved to {output_csv}")
+    df[keep].to_csv(output_csv, index=False)
+    print(f"Saved under/over representation metrics to {output_csv}")
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--llm_path", required=True, help="Path to LLM-based demographic estimates (JSON)")
-    parser.add_argument("--model_csv", required=True, help="CSV with model's demographic distribution by prompt_index")
-    parser.add_argument("--output_csv", required=True, help="CSV to save final comparison with under/over representation")
-    args = parser.parse_args()
-    main(args.llm_path, args.model_csv, args.output_csv)
+    p = argparse.ArgumentParser()
+    p.add_argument("--llm_csv",     required=True, help="LLM estimates CSV")
+    p.add_argument("--fairface_csv",required=True, help="FairFace aggregated CSV")
+    p.add_argument("--output_csv",  required=True, help="Output under/over CSV")
+    args = p.parse_args()
+    main(args.llm_csv, args.fairface_csv, args.output_csv)
