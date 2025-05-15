@@ -136,23 +136,29 @@ python compute_anachr_freq_and_sever.py \
 
 ### B3. Demographic Representation
 
-This method evaluates whether TTI models generate historically plausible demographic distributions in their outputs, focusing on race and gender. Rather than assuming modern demographic expectations, we compare generated outputs against contextual historical estimates provided by an LLM (GPT-4o). We then compute over- and underrepresentation scores by comparing model outputs with LLM predictions.
-
-## Files: 
+The module consists of two main scripts:
 - `generate_demographic_estimates.py`: Uses an LLM (GPT-4o) to infer plausible demographic ratios (gender and race) for each prompt
-- `evaluate_demographic_alignment.py`: Compares FairFace-predicted outputs to LLM predictions and computes over-/underrepresentation metrics
+- `over_underrepresentation_calculation.py`: Compares FairFace-predicted outputs to LLM predictions and computes over-/underrepresentation metrics
 
-## Usage:
+## Installation
+
+```bash
+pip install openai tqdm pandas
+```
+
+## Usage
+### B3.1 Generate historical demographic estimates from prompts
 ```bash
 # Generate historical demographic estimates from prompts
 python generate_demographic_estimates.py \
   --input_txt anachronism_detection/19th_century_prompts.txt \
   --output_csv 19th_century_demographics.csv
+```
 
-#  Evaluate demographic alignment
+#  B3.2 Evaluate demographic alignment
+```bash
 python over_underrepresentation_calculation.py \
   --llm_csv       19th_century_demographics.csv \
   --fairface_csv  fairface_aggregated_by_prompt.csv \
   --output_csv    19th_century_under_over.csv
-
-
+```
